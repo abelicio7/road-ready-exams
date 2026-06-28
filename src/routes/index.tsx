@@ -21,8 +21,13 @@ export const Route = createFileRoute("/")({
   component: Landing,
 });
 
+const CHECKOUT_URL = "https://www.ensinapay.com/checkout/0ce1b078-a7ba-4c32-ac14-2a1febd5cbcc";
 const scrollToBuy = () => {
-  document.getElementById("comprar")?.scrollIntoView({ behavior: "smooth" });
+  if (typeof window !== "undefined") {
+    const fbq = (window as unknown as { fbq?: (...args: unknown[]) => void }).fbq;
+    fbq?.("track", "InitiateCheckout");
+    window.location.href = CHECKOUT_URL;
+  }
 };
 
 function Landing() {
