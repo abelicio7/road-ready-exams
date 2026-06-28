@@ -2,6 +2,20 @@
 @source "../src";
 @import "tw-animate-css";
 
+@theme {
+  --color-brand-green: #1F8F4E;
+  --color-brand-green-dark: #156B3A;
+  --color-brand-green-light: #E8F5EE;
+  --color-brand-orange: #F57C00;
+  --color-brand-orange-dark: #D96B00;
+  --color-brand-orange-light: #FFF3E0;
+  --color-ink: #0A0A0A;
+  --color-ink-soft: #1F1F1F;
+  --font-display: "Plus Jakarta Sans", "Inter", system-ui, sans-serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+}
+
+
 @custom-variant dark (&:is(.dark *));
 
 /*
