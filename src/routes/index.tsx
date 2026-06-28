@@ -23,10 +23,15 @@ export const Route = createFileRoute("/")({
 
 const CHECKOUT_URL = "https://www.ensinapay.com/checkout/0ce1b078-a7ba-4c32-ac14-2a1febd5cbcc";
 const scrollToBuy = () => {
-  if (typeof window !== "undefined") {
-    const fbq = (window as unknown as { fbq?: (...args: unknown[]) => void }).fbq;
-    fbq?.("track", "InitiateCheckout");
-    window.location.href = CHECKOUT_URL;
+  if (typeof window === "undefined") return;
+  const fbq = (window as unknown as { fbq?: (...args: unknown[]) => void }).fbq;
+  const go = () => { window.location.href = CHECKOUT_URL; };
+  if (fbq) {
+    fbq("track", "InitiateCheckout", { value: 197, currency: "MZN" });
+    // dá tempo do pixel enviar antes do redirect
+    setTimeout(go, 350);
+  } else {
+    go();
   }
 };
 
