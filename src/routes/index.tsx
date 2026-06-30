@@ -1,9 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import {
-  CheckCircle2, XCircle, Star, Shield, Zap, Smartphone, FileText,
+  CheckCircle2, XCircle, Zap, Smartphone, FileText,
   BookOpen, Clock, Brain, Wallet, AlertTriangle, ChevronDown, Lock,
-  Download, MessageCircle, Award, Sparkles,
+  Download, Sparkles,
 } from "lucide-react";
 import heroProduct from "@/assets/hero-product.png";
 import solutionMockup from "@/assets/solution-mockup.png";
