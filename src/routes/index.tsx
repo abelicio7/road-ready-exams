@@ -7,7 +7,6 @@ import {
 } from "lucide-react";
 import heroProduct from "@/assets/hero-product.png";
 import solutionMockup from "@/assets/solution-mockup.png";
-import SocialProof from "@/components/SocialProof";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -50,7 +49,6 @@ function Landing() {
       <Faq />
       <Pricing />
       <Footer />
-      <SocialProof />
     </div>
   );
 }
