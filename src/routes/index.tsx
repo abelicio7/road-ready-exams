@@ -1,9 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import {
-  CheckCircle2, XCircle, Star, Shield, Zap, Smartphone, FileText,
+  CheckCircle2, XCircle, Zap, Smartphone, FileText,
   BookOpen, Clock, Brain, Wallet, AlertTriangle, ChevronDown, Lock,
-  Download, MessageCircle, Award, Sparkles,
+  Download, Sparkles,
 } from "lucide-react";
 import heroProduct from "@/assets/hero-product.png";
 import solutionMockup from "@/assets/solution-mockup.png";
@@ -28,7 +28,6 @@ const scrollToBuy = () => {
   const go = () => { window.location.href = CHECKOUT_URL; };
   if (fbq) {
     fbq("track", "InitiateCheckout", { value: 197, currency: "MZN" });
-    // dá tempo do pixel enviar antes do redirect
     setTimeout(go, 350);
   } else {
     go();
@@ -44,8 +43,6 @@ function Landing() {
       <Solution />
       <Receive />
       <Compare />
-      <Testimonials />
-      <Guarantee />
       <Faq />
       <Pricing />
       <Footer />
@@ -112,14 +109,6 @@ function Hero() {
                 <CheckCircle2 className="h-5 w-5" />
                 Quero Receber Agora
               </button>
-              <div className="flex items-center gap-1 text-xs text-[color:var(--color-ink-soft)]/70">
-                <div className="flex">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-4 w-4 fill-[color:var(--color-brand-orange)] text-[color:var(--color-brand-orange)]" />
-                  ))}
-                </div>
-                <span className="ml-1 font-medium">Aprovado por estudantes</span>
-              </div>
             </div>
 
             <div className="mt-8 grid grid-cols-2 gap-2 sm:flex sm:flex-wrap">
@@ -308,68 +297,6 @@ function Compare() {
   );
 }
 
-/* PLACEHOLDER: depoimentos fictícios — substituir por avaliações reais antes de publicar. */
-function Testimonials() {
-  const reviews = [
-    { name: "Ana M.", text: "Estudei pelos exames e fiquei muito mais confiante. As respostas comentadas ajudam imenso!", stars: 5 },
-    { name: "Carlos S.", text: "Material super organizado. Consegui revisar tudo no telemóvel nos intervalos do trabalho.", stars: 5 },
-    { name: "Joana P.", text: "Sem este PDF eu não teria passado de primeira. Vale cada metical investido.", stars: 5 },
-  ];
-  return (
-    <section className="bg-white py-20 sm:py-28">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="mx-auto max-w-2xl text-center">
-          <p className="text-sm font-bold uppercase tracking-wider text-[color:var(--color-brand-orange)]">Depoimentos</p>
-          <h2 className="mt-3 font-[var(--font-display)] text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl">
-            Quem estudou, aprovou.
-          </h2>
-          <p className="mt-2 text-xs text-[color:var(--color-ink-soft)]/50">* Nomes fictícios — depoimentos ilustrativos.</p>
-        </div>
-        <div className="mt-12 grid gap-5 md:grid-cols-3">
-          {reviews.map((r) => (
-            <div key={r.name} className="flex flex-col rounded-3xl border border-black/5 bg-gradient-to-br from-white to-[color:var(--color-brand-green-light)]/30 p-7 shadow-sm">
-              <div className="flex gap-0.5">
-                {[...Array(r.stars)].map((_, i) => (
-                  <Star key={i} className="h-4 w-4 fill-[color:var(--color-brand-orange)] text-[color:var(--color-brand-orange)]" />
-                ))}
-              </div>
-              <p className="mt-4 flex-1 text-base leading-relaxed text-[color:var(--color-ink-soft)]">"{r.text}"</p>
-              <div className="mt-5 flex items-center gap-3 border-t border-black/5 pt-4">
-                <div className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-[color:var(--color-brand-green)] font-bold text-white">
-                  {r.name[0]}
-                </div>
-                <div className="min-w-0">
-                  <p className="truncate text-sm font-bold">{r.name}</p>
-                  <p className="text-xs text-[color:var(--color-ink-soft)]/60">Estudante aprovado</p>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function Guarantee() {
-  return (
-    <section className="bg-gradient-to-b from-white to-[color:var(--color-brand-green-light)]/40 py-20 sm:py-24">
-      <div className="mx-auto max-w-3xl px-4 text-center sm:px-6">
-        <div className="mx-auto grid h-24 w-24 place-items-center rounded-full bg-gradient-to-br from-yellow-300 via-yellow-400 to-yellow-600 shadow-2xl shadow-yellow-500/30">
-          <Award className="h-12 w-12 text-white" />
-        </div>
-        <h2 className="mt-6 font-[var(--font-display)] text-3xl font-extrabold tracking-tight sm:text-4xl">
-          Compra Segura
-        </h2>
-        <p className="mt-4 text-base text-[color:var(--color-ink-soft)]/80 sm:text-lg">
-          Receba o seu material digital imediatamente após a confirmação do pagamento.
-          Processo simples, rápido e 100% seguro.
-        </p>
-      </div>
-    </section>
-  );
-}
-
 function Faq() {
   const faqs = [
     { q: "Como recebo o material?", a: "Após a confirmação do pagamento, você recebe o link de acesso ao PDF imediatamente." },
@@ -471,28 +398,10 @@ function Pricing() {
               Quero Receber Agora por 197 MT
             </a>
 
-            <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-3">
-              {[
-                { icon: Lock, t: "Compra Segura" },
-                { icon: Zap, t: "Entrega Imediata" },
-                { icon: Smartphone, t: "Acesso em Minutos" },
-              ].map(({ icon: Icon, t }) => (
-                <div key={t} className="flex items-center justify-center gap-2 rounded-xl border border-black/5 bg-white px-3 py-2.5 text-xs font-semibold text-[color:var(--color-ink-soft)]">
-                  <Icon className="h-4 w-4 text-[color:var(--color-brand-green)]" />
-                  {t}
-                </div>
-              ))}
-            </div>
-
             <p className="mt-6 text-center text-xs leading-relaxed text-[color:var(--color-ink-soft)]/60">
               Invista apenas 197 MT hoje para estudar de forma mais organizada e chegar mais preparado para o exame teórico.
             </p>
           </div>
-        </div>
-
-        <div className="mt-10 flex flex-wrap items-center justify-center gap-4 text-xs text-white/70">
-          <div className="flex items-center gap-1.5"><Shield className="h-4 w-4" /> Pagamento Protegido</div>
-          <div className="flex items-center gap-1.5"><MessageCircle className="h-4 w-4" /> Suporte via WhatsApp</div>
         </div>
       </div>
     </section>
