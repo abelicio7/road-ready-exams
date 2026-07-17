@@ -21,7 +21,7 @@ export const Route = createFileRoute("/")({
   component: Landing,
 });
 
-const CHECKOUT_URL = "https://checkout.escalepay.com/3681496";
+const CHECKOUT_URL = "https://www.ensinapay.com/checkout/0ce1b078-a7ba-4c32-ac14-2a1febd5cbcc";
 const scrollToBuy = () => {
   if (typeof window === "undefined") return;
   const fbq = (window as unknown as { fbq?: (...args: unknown[]) => void }).fbq;
