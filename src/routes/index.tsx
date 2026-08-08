@@ -12,9 +12,9 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Exames Teóricos Resolvidos — Prepare-se para o Exame de Condução" },
-      { name: "description", content: "25 exames teóricos resolvidos com respostas comentadas. Estude pelo celular, ganhe confiança e chegue preparado para o exame de condução. Apenas 260 MT." },
+      { name: "description", content: "25 exames teóricos resolvidos com respostas comentadas. Estude pelo celular, ganhe confiança e chegue preparado para o exame de condução. Apenas 297 MT." },
       { property: "og:title", content: "Exames Teóricos Resolvidos — Material Digital de Estudo" },
-      { property: "og:description", content: "25 exames resolvidos, respostas comentadas e acesso imediato por apenas 260 MT." },
+      { property: "og:description", content: "25 exames resolvidos, respostas comentadas e acesso imediato por apenas 297 MT." },
       { property: "og:type", content: "website" },
     ],
   }),
@@ -27,7 +27,7 @@ const scrollToBuy = () => {
   const fbq = (window as unknown as { fbq?: (...args: unknown[]) => void }).fbq;
   const go = () => { window.location.href = CHECKOUT_URL; };
   if (fbq) {
-    fbq("track", "InitiateCheckout", { value: 260, currency: "MZN" });
+    fbq("track", "InitiateCheckout", { value: 297, currency: "MZN" });
     // dá tempo do pixel enviar antes do redirect
     setTimeout(go, 350);
   } else {
@@ -428,13 +428,13 @@ function Pricing() {
         <div className="text-center">
           <div className="inline-flex items-center gap-2 rounded-full bg-[color:var(--color-brand-orange)] px-4 py-2 text-xs font-extrabold uppercase tracking-wider text-white shadow-lg shadow-orange-500/30">
             <Sparkles className="h-3.5 w-3.5" />
-            Oferta Especial — Apenas 260 MT
+            Oferta Especial — Apenas 297 MT
           </div>
           <h2 className="mt-6 font-[var(--font-display)] text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
             Comece a estudar hoje mesmo.
           </h2>
           <p className="mx-auto mt-5 max-w-xl text-base text-white/80 sm:text-lg">
-            Por apenas <strong className="text-white">260 MT</strong>, você recebe acesso imediato ao Pack Digital Exames Teóricos Resolvidos — estude no seu ritmo pelo celular, tablet ou computador.
+            Por apenas <strong className="text-white">297 MT</strong>, você recebe acesso imediato ao Pack Digital Exames Teóricos Resolvidos — estude no seu ritmo pelo celular, tablet ou computador.
           </p>
         </div>
 
@@ -444,7 +444,7 @@ function Pricing() {
               <p className="text-sm font-bold uppercase tracking-wider text-[color:var(--color-brand-orange)]">Investimento Único</p>
               <div className="mt-4 flex items-baseline justify-center gap-2">
                 <span className="font-[var(--font-display)] text-7xl font-black tracking-tighter sm:text-8xl">
-                  260
+                  297
                 </span>
                 <span className="font-[var(--font-display)] text-3xl font-extrabold text-[color:var(--color-brand-green)] sm:text-4xl">
                   MT
@@ -468,7 +468,7 @@ function Pricing() {
               className="group mt-8 flex w-full items-center justify-center gap-2 rounded-2xl bg-[color:var(--color-brand-orange)] px-6 py-5 text-base font-extrabold uppercase tracking-wide text-white shadow-xl shadow-orange-500/30 transition-all hover:-translate-y-0.5 hover:bg-[color:var(--color-brand-orange-dark)] hover:shadow-2xl sm:text-lg"
             >
               <CheckCircle2 className="h-5 w-5" />
-              QUERO RECEBER AGORA POR 260 MT
+              QUERO RECEBER AGORA POR 297 MT
             </a>
 
             <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-3">
@@ -485,7 +485,7 @@ function Pricing() {
             </div>
 
             <p className="mt-6 text-center text-xs leading-relaxed text-[color:var(--color-ink-soft)]/60">
-              Invista apenas 260 MT hoje para estudar de forma mais organizada e chegar mais preparado para o exame teórico.
+              Invista apenas 297 MT hoje para estudar de forma mais organizada e chegar mais preparado para o exame teórico.
             </p>
           </div>
         </div>
