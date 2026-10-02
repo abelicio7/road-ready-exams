@@ -444,7 +444,7 @@ function Pricing() {
               <p className="text-sm font-bold uppercase tracking-wider text-[color:var(--color-brand-orange)]">Investimento Único</p>
               <div className="mt-4 flex items-baseline justify-center gap-2">
                 <span className="font-[var(--font-display)] text-7xl font-black tracking-tighter sm:text-8xl">
-                  260
+                  250
                 </span>
                 <span className="font-[var(--font-display)] text-3xl font-extrabold text-[color:var(--color-brand-green)] sm:text-4xl">
                   MT
@@ -468,7 +468,7 @@ function Pricing() {
               className="group mt-8 flex w-full items-center justify-center gap-2 rounded-2xl bg-[color:var(--color-brand-orange)] px-6 py-5 text-base font-extrabold uppercase tracking-wide text-white shadow-xl shadow-orange-500/30 transition-all hover:-translate-y-0.5 hover:bg-[color:var(--color-brand-orange-dark)] hover:shadow-2xl sm:text-lg"
             >
               <CheckCircle2 className="h-5 w-5" />
-              QUERO RECEBER AGORA POR 260 MT
+              QUERO RECEBER AGORA POR 250 MT
             </a>
 
             <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-3">
