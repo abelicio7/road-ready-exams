@@ -62,7 +62,7 @@ function Header() {
             <BookOpen className="h-5 w-5" />
           </div>
           <span className="font-[var(--font-display)] text-base font-extrabold tracking-tight sm:text-lg">
-            Exames Resolvidos
+            Exames Resolvidos 2026
           </span>
         </div>
         <button
@@ -88,7 +88,7 @@ function Hero() {
           <div className="animate-fade-in">
             <div className="inline-flex items-center gap-2 rounded-full border border-[color:var(--color-brand-green)]/20 bg-white px-3 py-1.5 text-xs font-semibold text-[color:var(--color-brand-green)] shadow-sm">
               <Sparkles className="h-3.5 w-3.5" />
-              EXAMES TEÓRICOS RESOLVIDOS
+              EXAMES TEÓRICOS RESOLVIDOS 2026
             </div>
 
             <h1 className="mt-5 font-[var(--font-display)] text-4xl font-extrabold leading-[1.05] tracking-tight text-[color:var(--color-ink)] sm:text-5xl lg:text-6xl">
@@ -101,7 +101,7 @@ function Hero() {
 
             <p className="mt-5 max-w-xl text-base leading-relaxed text-[color:var(--color-ink-soft)]/80 sm:text-lg">
               Muitos candidatos reprovam por falta de prática com questões semelhantes às do exame teórico.
-              Este material reúne <strong className="text-[color:var(--color-ink)]">25 exames resolvidos</strong> para você estudar de forma organizada, compreender melhor o conteúdo e ganhar confiança antes da prova.
+              Este material reúne <strong className="text-[color:var(--color-ink)]">25 exames resolvidos de 2026</strong> para você estudar de forma organizada, compreender melhor o conteúdo e ganhar confiança antes da prova.
             </p>
 
             <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center">
@@ -507,7 +507,7 @@ function Footer() {
           <div className="grid h-8 w-8 place-items-center rounded-lg bg-[color:var(--color-brand-green)] text-white">
             <BookOpen className="h-4 w-4" />
           </div>
-          <span className="font-[var(--font-display)] text-sm font-extrabold">Exames Resolvidos</span>
+          <span className="font-[var(--font-display)] text-sm font-extrabold">Exames Resolvidos 2026</span>
         </div>
         <p className="text-xs text-[color:var(--color-ink-soft)]/60">
           © {new Date().getFullYear()} Exames Teóricos Resolvidos. Todos os direitos reservados.
