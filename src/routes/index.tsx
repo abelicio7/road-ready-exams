@@ -21,7 +21,7 @@ export const Route = createFileRoute("/")({
   component: Landing,
 });
 
-const CHECKOUT_URL = "https://checkout.escalepay.com/3681496";
+const CHECKOUT_URL = "https://pagar.co.mz/p/exames-teoricos-resolvidos-3n4alk";
 const scrollToBuy = () => {
   if (typeof window === "undefined") return;
   const fbq = (window as unknown as { fbq?: (...args: unknown[]) => void }).fbq;
